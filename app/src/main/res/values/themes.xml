@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="Theme.Java_Kotlin_JetpackCompose_MVP_MVVM_MVI_Example" parent="android:Theme.Material.Light.NoActionBar" />
+</resources>
