@@ -24,6 +24,7 @@ class MainActivity : ComponentActivity() {
                 ) {
                     Greeting("Android")
                     // Разделы
+
                     // MVP MovieApp - Java
                     // MVVM - Kotlin что то из кипаро ?
                     // MVVM - Kotlin что то не из кипаро ?
