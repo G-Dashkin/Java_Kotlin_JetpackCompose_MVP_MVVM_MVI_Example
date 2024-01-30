@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingTop="50dp"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/btnExample1"
+            android:layout_margin="5dp"
+            android:text="Example 1"
+            android:gravity="left|center"
+            android:paddingLeft="20dp"
+            android:textAllCaps="false"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <Button
+            android:id="@+id/btnExample2"
+            android:layout_margin="5dp"
+            android:text="Example 2"
+            android:gravity="left|center"
+            android:paddingLeft="20dp"
+            android:textAllCaps="false"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <Button
+            android:id="@+id/btnExample3"
+            android:layout_margin="5dp"
+            android:text="Example 3"
+            android:gravity="left|center"
+            android:paddingLeft="20dp"
+            android:textAllCaps="false"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <Button
+            android:id="@+id/btnExample4"
+            android:layout_margin="5dp"
+            android:text="Example 4"
+            android:gravity="left|center"
+            android:paddingLeft="20dp"
+            android:textAllCaps="false"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <Button
+            android:id="@+id/btnExample5"
+            android:layout_margin="5dp"
+            android:text="Example 5"
+            android:gravity="left|center"
+            android:paddingLeft="20dp"
+            android:textAllCaps="false"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <Button
+            android:id="@+id/btnExample6"
+            android:layout_margin="5dp"
+            android:text="Example 6"
+            android:gravity="left|center"
+            android:paddingLeft="20dp"
+            android:textAllCaps="false"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <View
+            android:layout_margin="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#000000" />
+
+        <Button
+            android:id="@+id/btnExample7"
+            android:layout_margin="5dp"
+            android:text="Example 7 SimpleApp MVP"
+            android:gravity="left|center"
+            android:paddingLeft="20dp"
+            android:textAllCaps="false"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <Button
+            android:id="@+id/btnExample8"
+            android:layout_margin="5dp"
+            android:text="Example 8 SimpleApp MVVM"
+            android:gravity="left|center"
+            android:paddingLeft="20dp"
+            android:textAllCaps="false"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+
+
+        <Button
+            android:id="@+id/btnExample9"
+            android:layout_margin="5dp"
+            android:text="Example 9 SimpleApp MVI"
+            android:gravity="left|center"
+            android:paddingLeft="20dp"
+            android:textAllCaps="false"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <View
+            android:layout_margin="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#000000" />
+
+        <Button
+            android:id="@+id/btnExample10"
+            android:layout_margin="5dp"
+            android:text="Example 10 PizaApp AUTH - MVP"
+            android:gravity="left|center"
+            android:paddingLeft="20dp"
+            android:textAllCaps="false"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <Button
+            android:id="@+id/btnExample11"
+            android:layout_margin="5dp"
+            android:text="Example 11 PizaApp AUTH - MVVM"
+            android:gravity="left|center"
+            android:paddingLeft="20dp"
+            android:textAllCaps="false"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <Button
+            android:id="@+id/btnExample12"
+            android:layout_margin="5dp"
+            android:text="Example 12 PizaApp AUTH - MVI"
+            android:gravity="left|center"
+            android:paddingLeft="20dp"
+            android:textAllCaps="false"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+</ScrollView>

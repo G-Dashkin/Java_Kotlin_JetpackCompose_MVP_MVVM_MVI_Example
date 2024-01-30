@@ -12,6 +12,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Java_Kotlin_JetpackCompose_MVP_MVVM_MVI_Example"
         tools:targetApi="31">
+
         <activity
             android:name=".MainActivity"
             android:exported="true"
@@ -23,6 +24,30 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <!--______________________________________________________________-->
+        <activity
+            android:name=".Example7SimpleAppMVP.presentation.SimpleAppMVP_Activity"
+            android:theme="@style/Theme.Material3.Light.NoActionBar"
+            android:exported="false" />
+        <activity
+            android:name=".Example8SimpleAppMVVM.presentation.SimpleAppMVVM_Activity"
+            android:theme="@style/Theme.Material3.Light.NoActionBar"
+            android:exported="false" />
+        <activity
+            android:name=".Example9SimpleAppMVI.presentation.SimpleAppMVI_Activity"
+            android:theme="@style/Theme.Material3.Light.NoActionBar"
+            android:exported="false" />
+        <!--______________________________________________________________-->
+        <activity
+            android:name=".Example10PizaAppAuth_MVP.PizaAppAuthMVP_Activity"
+            android:exported="false" />
+        <activity
+            android:name=".Example11PizaAppAuth_MVVM.PizaAppAuthMVVM_Activity"
+            android:exported="false" />
+        <activity
+            android:name=".Example12PizaAppAuth_MVI.PizaAppAuthMVI_Activity"
+            android:exported="false" />
+        <!--______________________________________________________________-->
     </application>
 
 </manifest>

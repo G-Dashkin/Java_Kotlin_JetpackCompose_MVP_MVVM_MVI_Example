@@ -1,61 +1,45 @@
 package com.example.java_kotlin_jetpackcompose_mvp_mvvm_mvi_example
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.activity.ComponentActivity
-import androidx.activity.compose.setContent
-import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.Surface
-import androidx.compose.material3.Text
-import androidx.compose.runtime.Composable
-import androidx.compose.ui.Modifier
-import androidx.compose.ui.tooling.preview.Preview
-import com.example.java_kotlin_jetpackcompose_mvp_mvvm_mvi_example.ui.theme.Java_Kotlin_JetpackCompose_MVP_MVVM_MVI_ExampleTheme
+import com.example.java_kotlin_jetpackcompose_mvp_mvvm_mvi_example.Example12PizaAppAuth_MVI.PizaAppAuthMVI_Activity
+import com.example.java_kotlin_jetpackcompose_mvp_mvvm_mvi_example.Example10PizaAppAuth_MVP.PizaAppAuthMVP_Activity
+import com.example.java_kotlin_jetpackcompose_mvp_mvvm_mvi_example.Example11PizaAppAuth_MVVM.PizaAppAuthMVVM_Activity
+import com.example.java_kotlin_jetpackcompose_mvp_mvvm_mvi_example.Example7SimpleAppMVP.presentation.SimpleAppMVP_Activity
+import com.example.java_kotlin_jetpackcompose_mvp_mvvm_mvi_example.Example8SimpleAppMVVM.presentation.SimpleAppMVVM_Activity
+import com.example.java_kotlin_jetpackcompose_mvp_mvvm_mvi_example.Example9SimpleAppMVI.presentation.SimpleAppMVI_Activity
+import com.example.java_kotlin_jetpackcompose_mvp_mvvm_mvi_example.databinding.ActivityMainBinding
 
 class MainActivity : ComponentActivity() {
+
+    private lateinit var binding: ActivityMainBinding
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContent {
-            Java_Kotlin_JetpackCompose_MVP_MVVM_MVI_ExampleTheme {
-                // A surface container using the 'background' color from the theme
-                Surface(
-                    modifier = Modifier.fillMaxSize(),
-                    color = MaterialTheme.colorScheme.background
-                ) {
-                    Greeting("Android")
-                    // Разделы
+        binding = ActivityMainBinding.inflate(layoutInflater)
+        setContentView(binding.root)
 
-                    // MVP MovieApp - Java
-                    // MVVM - Kotlin что то из кипаро ?
-                    // MVVM - Kotlin что то не из кипаро ?
-                    // MVVM - Kotlin что то еще...?
-                    // MVI NoteList - JetpackCompose
-                    // ----
-                    // MVP - ТемофейExample Kotlin
-                    // MVVM - ТемофейExample Kotlin
-                    // MVI - ТемофейExample Kotlin
-                    // ----
-                    // MVP - PizaApp (AUTH Чать)
-                    // MVVM - PizaApp (AUTH Чать)
-                    // MVI  - PizaApp (AUTH Чать)
-                }
-            }
-        }
-    }
-}
+        // MVP MovieApp - Java
+        // MVVM - Kotlin что то из кипаро ?
+        // MVVM - Kotlin что то не из кипаро ?
+        // MVVM - Kotlin что то еще...?
+        // MVI NoteList - JetpackCompose
 
-@Composable
-fun Greeting(name: String, modifier: Modifier = Modifier) {
-    Text(
-        text = "Hello $name!",
-        modifier = modifier
-    )
-}
+        binding.btnExample1.setOnClickListener {  }
+        binding.btnExample2.setOnClickListener {  }
+        binding.btnExample3.setOnClickListener {  }
+        binding.btnExample4.setOnClickListener {  }
+        binding.btnExample5.setOnClickListener {  }
+        binding.btnExample6.setOnClickListener {  }
+        //-----------------------------------SimpleMVAPP--------------------------------------------
+        binding.btnExample7.setOnClickListener { startActivity(Intent(this@MainActivity, SimpleAppMVP_Activity::class.java)) }
+        binding.btnExample8.setOnClickListener { startActivity(Intent(this@MainActivity, SimpleAppMVVM_Activity::class.java)) }
+        binding.btnExample9.setOnClickListener { startActivity(Intent(this@MainActivity, SimpleAppMVI_Activity::class.java)) }
+        //-----------------------------------PizaApp AUTH-------------------------------------------
+        binding.btnExample10.setOnClickListener { startActivity(Intent(this@MainActivity, PizaAppAuthMVP_Activity::class.java)) }
+        binding.btnExample11.setOnClickListener { startActivity(Intent(this@MainActivity, PizaAppAuthMVVM_Activity::class.java)) }
+        binding.btnExample12.setOnClickListener { startActivity(Intent(this@MainActivity, PizaAppAuthMVI_Activity::class.java)) }
 
-@Preview(showBackground = true)
-@Composable
-fun GreetingPreview() {
-    Java_Kotlin_JetpackCompose_MVP_MVVM_MVI_ExampleTheme {
-        Greeting("Android")
     }
 }
