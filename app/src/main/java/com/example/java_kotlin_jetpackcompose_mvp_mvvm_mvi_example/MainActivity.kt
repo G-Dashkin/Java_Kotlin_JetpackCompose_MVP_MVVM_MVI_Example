@@ -6,6 +6,7 @@ import androidx.activity.ComponentActivity
 import com.example.java_kotlin_jetpackcompose_mvp_mvvm_mvi_example.Example12PizaAppAuth_MVI.PizaAppAuthMVI_Activity
 import com.example.java_kotlin_jetpackcompose_mvp_mvvm_mvi_example.Example10PizaAppAuth_MVP.PizaAppAuthMVP_Activity
 import com.example.java_kotlin_jetpackcompose_mvp_mvvm_mvi_example.Example11PizaAppAuth_MVVM.PizaAppAuthMVVM_Activity
+import com.example.java_kotlin_jetpackcompose_mvp_mvvm_mvi_example.Example1EmployeesListMVP.screens.employees.EmployeesListMainActivity
 import com.example.java_kotlin_jetpackcompose_mvp_mvvm_mvi_example.Example7SimpleAppMVP.presentation.SimpleAppMVP_Activity
 import com.example.java_kotlin_jetpackcompose_mvp_mvvm_mvi_example.Example8SimpleAppMVVM.presentation.SimpleAppMVVM_Activity
 import com.example.java_kotlin_jetpackcompose_mvp_mvvm_mvi_example.Example9SimpleAppMVI.presentation.SimpleAppMVI_Activity
@@ -26,7 +27,7 @@ class MainActivity : ComponentActivity() {
         // MVVM - Kotlin что то еще...?
         // MVI NoteList - JetpackCompose
 
-        binding.btnExample1.setOnClickListener {  }
+        binding.btnExample1.setOnClickListener { startActivity(Intent(this@MainActivity, EmployeesListMainActivity::class.java)) }
         binding.btnExample2.setOnClickListener {  }
         binding.btnExample3.setOnClickListener {  }
         binding.btnExample4.setOnClickListener {  }
