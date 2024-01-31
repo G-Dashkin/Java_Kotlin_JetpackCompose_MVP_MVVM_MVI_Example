@@ -19,8 +19,7 @@ class SimpleAppMVP_Activity : AppCompatActivity(), SimpleAppView {
     private val userRepository by lazy(LazyThreadSafetyMode.NONE) {
         UserRepositoryImpl(userStorage = SharedPrefUserStorage(context = this))
     }
-////    private val userRepository = UserRepositoryImpl(userStorage = SharedPrefUserStorage(context = this))
-//
+
     private val getUserNameUseCase by lazy(LazyThreadSafetyMode.NONE) {
         GetUserNameUseCase(userRepository = userRepository)
     }

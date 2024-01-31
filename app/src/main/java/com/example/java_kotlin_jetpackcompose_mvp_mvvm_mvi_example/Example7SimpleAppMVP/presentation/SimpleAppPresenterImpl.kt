@@ -18,13 +18,7 @@ class SimpleAppPresenterImpl (
         Log.d("MyLog", "ViewModel created")
     }
 
-    // Это удаялем
-//    override fun onCleared() {
-//        Log.d("MyLog", "ViewModel cleared")
-//        super.onCleared()
-//    }
-
-    // А здесь добавляем override
+    // здесь добавляем override
     override fun save(text: String) {
         val params = SaveUserNameParam(name = text)
         val resultData: Boolean = saveUserNameUseCase.execute(param = params)
