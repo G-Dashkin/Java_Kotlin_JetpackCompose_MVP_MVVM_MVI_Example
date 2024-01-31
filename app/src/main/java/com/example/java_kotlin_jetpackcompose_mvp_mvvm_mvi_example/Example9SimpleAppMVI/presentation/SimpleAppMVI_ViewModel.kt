@@ -14,11 +14,12 @@ class SimpleAppMVI_ViewModel (
     private val saveUserNameUseCase: SaveUserNameUseCase
 ): ViewModel() {
 
-    private var liveData = MutableLiveData<String>()
-    val resultLiveData: LiveData<String> = liveData
+    private var stateLiveData = MutableLiveData<SimpleAppMVI_State>()
+    val resultLiveData: LiveData<SimpleAppMVI_State> = stateLiveData
 
     init {
         Log.d("MyLog", "ViewModel created")
+        stateLiveData.value = SimpleAppMVI_State(saveResult = false, firstName = "", lastName = "")
     }
 
     override fun onCleared() {
@@ -26,15 +27,35 @@ class SimpleAppMVI_ViewModel (
         super.onCleared()
     }
 
-    fun save(text: String) {
-        val params = SaveUserNameParam(name = text)
-        val resultData: Boolean = saveUserNameUseCase.execute(param = params)
-        liveData.value = "Save result = $resultData"
+    fun send(event: SimpleAppMVI_Event) {
+        when(event) {
+            is SaveEvent -> {
+                save(text = event.text)
+            }
+            is LoadEvent -> {
+                load()
+            }
+        }
+
     }
 
-    fun load() {
+    private fun save(text: String) {
+        val params = SaveUserNameParam(name = text)
+        val resultData: Boolean = saveUserNameUseCase.execute(param = params)
+        stateLiveData.value = SimpleAppMVI_State(
+            saveResult = resultData,
+            firstName = stateLiveData.value!!.firstName,
+            lastName = stateLiveData.value!!.lastName
+        )
+    }
+
+    private fun load() {
         val userName: UserName = getUserNameUseCase.execute()
-        liveData.value = "${userName.firstName} ${userName.lastName}"
+        stateLiveData.value = SimpleAppMVI_State(
+            saveResult = stateLiveData.value!!.saveResult,
+            firstName = userName.firstName,
+            lastName = userName.lastName
+        )
     }
 
 }

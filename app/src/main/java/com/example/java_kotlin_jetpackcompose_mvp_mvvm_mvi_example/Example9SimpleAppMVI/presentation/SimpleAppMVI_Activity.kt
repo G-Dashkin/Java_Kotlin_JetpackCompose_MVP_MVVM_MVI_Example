@@ -19,18 +19,18 @@ class SimpleAppMVI_Activity : AppCompatActivity() {
 
         viewModel = ViewModelProvider(this, SimpleAppMVI_Factory(this)).get(SimpleAppMVI_ViewModel::class.java)
 
-        viewModel.resultLiveData.observe(this) { text ->
-            binding.dataTextView.text = text
+        viewModel.resultLiveData.observe(this) { state ->
+            binding.dataTextView.text = "${state.firstName} ${state.lastName}"
         }
 
         binding.apply {
 
             sendButton.setOnClickListener {
-                viewModel.save(dataEditText.text.toString())
+                viewModel.send(SaveEvent(text = binding.dataEditText.text.toString()))
             }
 
             receiveButton.setOnClickListener {
-                viewModel.load()
+                viewModel.send(LoadEvent())
             }
 
         }

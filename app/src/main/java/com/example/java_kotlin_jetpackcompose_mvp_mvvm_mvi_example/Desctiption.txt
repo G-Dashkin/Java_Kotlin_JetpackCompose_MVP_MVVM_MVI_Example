@@ -19,8 +19,13 @@ MVI // I - Intent
 
 
 ----------------------------------------------------------------------------------------------------
-MVP  // P - Presenter (посредник между Model и View)- Напрямую View и Model не взаимодействуют. Для этого используется Presenter.
+MVP  // P - Presenter (посредник между Model и View) - Напрямую View и Model не взаимодействуют. Для этого используется Presenter.
 ----------------------
+Главное отличие от MVVM (в MVVM ViewModel ничего не знает об активти, а активити имеет ссылку на ViewModel и может с ней что то делать)
+В MVP активити имеет ссылку на Presenter и Presenter имеет ссылкку на активити (оба занют друг о друге)
+Чтобы получить доступы только к нужным методам, создаются интерфейсы для активти и презентора.
+
+
 [View -> Presenter]                     View знает о Presenter
 [Presenter -> View, Presenter -> Model] Presenter знает о View и Model
 [Model Х->Х Presenter, Model Х->Х View] Model не знает о Presenter и View, она сама по себе
