@@ -6,10 +6,11 @@ import androidx.activity.ComponentActivity
 import com.example.java_kotlin_jetpackcompose_mvp_mvvm_mvi_example.Example12PizaAppAuth_MVI.PizaAppAuthMVI_Activity
 import com.example.java_kotlin_jetpackcompose_mvp_mvvm_mvi_example.Example10PizaAppAuth_MVP.PizaAppAuthMVP_Activity
 import com.example.java_kotlin_jetpackcompose_mvp_mvvm_mvi_example.Example11PizaAppAuth_MVVM.PizaAppAuthMVVM_Activity
-import com.example.java_kotlin_jetpackcompose_mvp_mvvm_mvi_example.Example1EmployeesListMVP.screens.employees.EmployeesListMainActivity
-import com.example.java_kotlin_jetpackcompose_mvp_mvvm_mvi_example.Example7SimpleAppMVP.presentation.SimpleAppMVP_Activity
-import com.example.java_kotlin_jetpackcompose_mvp_mvvm_mvi_example.Example8SimpleAppMVVM.presentation.SimpleAppMVVM_Activity
-import com.example.java_kotlin_jetpackcompose_mvp_mvvm_mvi_example.Example9SimpleAppMVI.presentation.SimpleAppMVI_Activity
+import com.example.java_kotlin_jetpackcompose_mvp_mvvm_mvi_example.Example1EmployeesList_MVP.screens.employees.EmployeesListMainActivity
+import com.example.java_kotlin_jetpackcompose_mvp_mvvm_mvi_example.Example5MviDecompose_MVI.presentation.MviDecomposeMainActivity
+import com.example.java_kotlin_jetpackcompose_mvp_mvvm_mvi_example.Example7SimpleApp_MVP.presentation.SimpleAppMVP_Activity
+import com.example.java_kotlin_jetpackcompose_mvp_mvvm_mvi_example.Example8SimpleApp_MVVM.presentation.SimpleAppMVVM_Activity
+import com.example.java_kotlin_jetpackcompose_mvp_mvvm_mvi_example.Example9SimpleApp_MVI.presentation.SimpleAppMVI_Activity
 import com.example.java_kotlin_jetpackcompose_mvp_mvvm_mvi_example.databinding.ActivityMainBinding
 
 class MainActivity : ComponentActivity() {
@@ -28,11 +29,11 @@ class MainActivity : ComponentActivity() {
         // MVI NoteList - JetpackCompose
 
         binding.btnExample1.setOnClickListener { startActivity(Intent(this@MainActivity, EmployeesListMainActivity::class.java)) }
-        binding.btnExample2.setOnClickListener {  }
-        binding.btnExample3.setOnClickListener {  }
-        binding.btnExample4.setOnClickListener {  }
-        binding.btnExample5.setOnClickListener {  }
-        binding.btnExample6.setOnClickListener {  }
+        binding.btnExample2.setOnClickListener { "https://www.youtube.com/watch?v=7aEvmkGigOo" }
+        binding.btnExample3.setOnClickListener { "https://www.youtube.com/watch?v=7aEvmkGigOo" + "или" + "https://www.youtube.com/watch?v=7Vc2XUiXHgM&list=PL9myac9mW281RV738DvvTDnJSiA26kfUq" }
+        binding.btnExample4.setOnClickListener { "https://www.youtube.com/watch?v=T4NGT9DL3qw" }
+        binding.btnExample5.setOnClickListener { startActivity(Intent(this@MainActivity, MviDecomposeMainActivity::class.java)) }
+        binding.btnExample6.setOnClickListener { "https://www.youtube.com/watch?v=xZ_A6kYfMEg" }
         //-----------------------------------SimpleMVAPP--------------------------------------------
         binding.btnExample7.setOnClickListener { startActivity(Intent(this@MainActivity, SimpleAppMVP_Activity::class.java)) }
         binding.btnExample8.setOnClickListener { startActivity(Intent(this@MainActivity, SimpleAppMVVM_Activity::class.java)) }

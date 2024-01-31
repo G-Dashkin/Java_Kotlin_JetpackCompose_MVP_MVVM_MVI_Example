@@ -2,7 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
-    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:allowBackup="true"
@@ -27,25 +27,25 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
         <activity
-            android:name=".Example1EmployeesListMVP.screens.employees.EmployeesListMainActivity"
-            android:exported="false"
-            android:theme="@style/Theme.Material3.Light.NoActionBar"/>
-
-        <activity
-            android:name=".Example7SimpleAppMVP.presentation.SimpleAppMVP_Activity"
+            android:name=".Example1EmployeesList_MVP.screens.employees.EmployeesListMainActivity"
             android:exported="false"
             android:theme="@style/Theme.Material3.Light.NoActionBar" />
         <activity
-            android:name=".Example8SimpleAppMVVM.presentation.SimpleAppMVVM_Activity"
+            android:name=".Example5MviDecompose_MVI.presentation.MviDecomposeMainActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Example7SimpleApp_MVP.presentation.SimpleAppMVP_Activity"
             android:exported="false"
             android:theme="@style/Theme.Material3.Light.NoActionBar" />
         <activity
-            android:name=".Example9SimpleAppMVI.presentation.SimpleAppMVI_Activity"
+            android:name=".Example8SimpleApp_MVVM.presentation.SimpleAppMVVM_Activity"
             android:exported="false"
             android:theme="@style/Theme.Material3.Light.NoActionBar" />
-
+        <activity
+            android:name=".Example9SimpleApp_MVI.presentation.SimpleAppMVI_Activity"
+            android:exported="false"
+            android:theme="@style/Theme.Material3.Light.NoActionBar" />
         <activity
             android:name=".Example10PizaAppAuth_MVP.PizaAppAuthMVP_Activity"
             android:exported="false" />
