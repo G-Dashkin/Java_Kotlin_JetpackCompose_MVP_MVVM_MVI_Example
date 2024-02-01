@@ -31,9 +31,21 @@
             android:name=".Example1EmployeesList_MVP.screens.employees.EmployeesListMainActivity"
             android:exported="false"
             android:theme="@style/Theme.Material3.Light.NoActionBar" />
+
+
+        <activity
+            android:name=".Example6_1MviDecompose_MVI.presentation.MviDecompose1MainActivity"
+            android:exported="false" />
+
         <activity
             android:name=".Example6_2MviDecompose_MVI.presentation.MviDecompose2MainActivity"
             android:exported="false" />
+
+        <activity
+            android:name=".Example6_3MviDecompose_MVI.presentation.MviDecompose3MainActivity"
+            android:exported="false" />
+
+
         <activity
             android:name=".Example7SimpleApp_MVP.presentation.SimpleAppMVP_Activity"
             android:exported="false"
