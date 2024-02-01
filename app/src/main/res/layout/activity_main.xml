@@ -65,7 +65,7 @@
         <Button
             android:id="@+id/btnExample61"
             android:layout_margin="5dp"
-            android:text="Example 6.1 Decompose"
+            android:text="Example 6.1 Not Decompose"
             android:gravity="left|center"
             android:paddingLeft="20dp"
             android:textAllCaps="false"
@@ -75,7 +75,17 @@
         <Button
             android:id="@+id/btnExample62"
             android:layout_margin="5dp"
-            android:text="Example 6.2 Decompose + MVI"
+            android:text="Example 6.2 Decompose"
+            android:gravity="left|center"
+            android:paddingLeft="20dp"
+            android:textAllCaps="false"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <Button
+            android:id="@+id/btnExample63"
+            android:layout_margin="5dp"
+            android:text="Example 6.3 Decompose + MVI"
             android:gravity="left|center"
             android:paddingLeft="20dp"
             android:textAllCaps="false"

@@ -1,0 +1,78 @@
+package com.example.java_kotlin_jetpackcompose_mvp_mvvm_mvi_example.Example6_2MviDecompose_MVI.presentation.components
+
+import android.os.Parcelable
+import com.arkivanov.decompose.ComponentContext
+import com.arkivanov.decompose.router.stack.ChildStack
+import com.arkivanov.decompose.router.stack.StackNavigation
+import com.arkivanov.decompose.router.stack.childStack
+import com.arkivanov.decompose.router.stack.pop
+import com.arkivanov.decompose.router.stack.push
+import com.arkivanov.decompose.value.Value
+import com.example.java_kotlin_jetpackcompose_mvp_mvvm_mvi_example.Example6_2MviDecompose_MVI.domain.models.Contact
+import kotlinx.parcelize.Parcelize
+
+class DefaultRootComponent(
+    componentContext: ComponentContext
+): RootComponent, ComponentContext by componentContext {
+
+    private val navigation = StackNavigation<Config>()
+
+    override val stack: Value<ChildStack<*, RootComponent.Child>> = childStack(
+        source = navigation,
+        initialConfiguration = Config.ContactList,
+        handleBackButton = true,
+        childFactory = { configuration, componentContext -> child(config = configuration, componentContext = componentContext ) }
+    )
+
+    private fun child(
+        config: Config,
+        componentContext: ComponentContext
+    ): RootComponent.Child {
+        return when(config) {
+            Config.AddContact -> {
+               val component = DefaultAddContactComponent(
+                    componentContext = componentContext,
+                    onContactSaved = {
+                        navigation.pop()
+                    }
+                )
+                RootComponent.Child.AddContact(component)
+            }
+            Config.ContactList -> {
+                val component = DefaultContactListComponent(
+                    componentContext = componentContext,
+                    onAddContactRequested = {
+                        navigation.push(Config.AddContact)
+                    },
+                    onEditingContactRequested = {
+                        navigation.push(Config.EditContact(contact = it))
+                    }
+                )
+                RootComponent.Child.ContactList(component)
+            }
+            is Config.EditContact -> {
+                val component =  DefaultEditContactComponent(
+                    componentContext = componentContext,
+                    contact = config.contact,
+                    onContactSave = {
+                        navigation.pop()
+                    }
+                )
+                RootComponent.Child.EditContact(component)
+            }
+        }
+    }
+
+    private sealed interface Config: Parcelable {
+
+        @Parcelize
+        object ContactList : Config
+
+        @Parcelize
+        object AddContact : Config
+
+        @Parcelize
+        data class EditContact(val contact: Contact) : Config
+    }
+
+}

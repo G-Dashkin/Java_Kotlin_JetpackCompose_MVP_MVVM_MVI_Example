@@ -1,4 +1,4 @@
-package com.example.java_kotlin_jetpackcompose_mvp_mvvm_mvi_example.Example6_1MviDecompose_MVI.presentation.features.contact_list
+package com.example.java_kotlin_jetpackcompose_mvp_mvvm_mvi_example.Example6_3MviDecompose_MVI.presentation.features.contact_list
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.clickable
@@ -27,16 +27,13 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.vector.rememberVectorPainter
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import androidx.lifecycle.viewmodel.compose.viewModel
-import com.example.java_kotlin_jetpackcompose_mvp_mvvm_mvi_example.Example6_1MviDecompose_MVI.domain.models.Contact
+import com.example.java_kotlin_jetpackcompose_mvp_mvvm_mvi_example.Example6_3MviDecompose_MVI.presentation.components.ContactListComponent
 
 @Composable
 fun Contacts(
-    onAddContactClick: () -> Unit,
-    onContactClick: (Contact) -> Unit
+    component: ContactListComponent
 ) {
-    val viewModel: ContactListViewModel = viewModel()
-    val contacts by viewModel.contacts.collectAsState()
+    val model by component.model.collectAsState()
 
     Box(
         modifier = Modifier.fillMaxSize()
@@ -47,14 +44,14 @@ fun Contacts(
             contentPadding = PaddingValues(8.dp)
         ) {
             items(
-                items = contacts,
+                items = model.contactList,
                 key = {
                     it.id
                 }
             ) {
                 Contact(
                     modifier = Modifier.clickable {
-                        onContactClick(it)
+                        component.onContactLicked(it)
                     },
                     username = it.username,
                     phone = it.phone
@@ -67,7 +64,7 @@ fun Contacts(
                 .padding(16.dp),
             containerColor = MaterialTheme.colorScheme.tertiary,
             onClick = {
-                onAddContactClick()
+                component.onAddContactClicked()
             }
         ) {
             Image(

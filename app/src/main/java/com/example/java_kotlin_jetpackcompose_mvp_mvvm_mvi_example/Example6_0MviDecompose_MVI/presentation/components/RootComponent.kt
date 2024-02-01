@@ -1,4 +1,0 @@
-package com.example.java_kotlin_jetpackcompose_mvp_mvvm_mvi_example.Example6_1MviDecompose_MVI.presentation.components
-
-interface RootComponent {
-}

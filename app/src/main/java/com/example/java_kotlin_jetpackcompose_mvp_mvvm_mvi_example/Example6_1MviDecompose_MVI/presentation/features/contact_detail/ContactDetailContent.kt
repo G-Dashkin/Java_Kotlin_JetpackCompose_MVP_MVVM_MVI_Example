@@ -12,7 +12,6 @@ import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.material3.TextField
 import androidx.compose.runtime.Composable
-import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
@@ -21,16 +20,14 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.viewmodel.compose.viewModel
 import com.example.java_kotlin_jetpackcompose_mvp_mvvm_mvi_example.Example6_1MviDecompose_MVI.domain.models.Contact
-import com.example.java_kotlin_jetpackcompose_mvp_mvvm_mvi_example.Example6_1MviDecompose_MVI.presentation.components.AddContactComponent
-import com.example.java_kotlin_jetpackcompose_mvp_mvvm_mvi_example.Example6_1MviDecompose_MVI.presentation.components.EditContactComponent
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun AddContact(
-    component: AddContactComponent
+    contact: Contact? = null,
+    onContactSaved: () -> Unit,
 ) {
-
-    val model by component.model.collectAsState()
+    val viewModel: ContactDetailViewModel = viewModel()
 
     Column(
         modifier = Modifier
@@ -39,26 +36,42 @@ fun AddContact(
             .padding(8.dp),
         verticalArrangement = Arrangement.spacedBy(8.dp)
     ) {
+        var username by remember {
+            mutableStateOf(contact?.username ?: "")
+        }
         TextField(
             modifier = Modifier.fillMaxWidth(),
-            value = model.userName,
+            value = username,
             placeholder = {
                 Text(text = "Username:")
             },
-            onValueChange = { component.onUserNameChange(it) }
+            onValueChange = { username = it }
         )
+        var phone by remember {
+            mutableStateOf(contact?.phone ?: "")
+        }
         TextField(
             modifier = Modifier.fillMaxWidth(),
-            value = model.phone,
+            value = phone,
             placeholder = {
                 Text(text = "Phone:")
             },
-            onValueChange = { component.onPhoneChange(it) }
+            onValueChange = { phone = it }
         )
         Button(
             modifier = Modifier.fillMaxWidth(),
             onClick = {
-               component.onSaveContactClicked()
+                if (contact == null) {
+                    viewModel.addContact(username, phone)
+                } else {
+                    viewModel.editContact(
+                        contact.copy(
+                            username = username,
+                            phone = phone
+                        )
+                    )
+                }
+                onContactSaved()
             }
         ) {
             Text(text = "Save")
@@ -66,43 +79,10 @@ fun AddContact(
     }
 }
 
-@OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun EditContact(
-    component: EditContactComponent
+    contact: Contact,
+    onContactChanged: () -> Unit,
 ) {
-    val model by component.model.collectAsState()
-
-    Column(
-        modifier = Modifier
-            .fillMaxSize()
-            .background(MaterialTheme.colorScheme.background)
-            .padding(8.dp),
-        verticalArrangement = Arrangement.spacedBy(8.dp)
-    ) {
-        TextField(
-            modifier = Modifier.fillMaxWidth(),
-            value = model.userName,
-            placeholder = {
-                Text(text = "Username:")
-            },
-            onValueChange = { component.onUserNameChange(it) }
-        )
-        TextField(
-            modifier = Modifier.fillMaxWidth(),
-            value = model.phone,
-            placeholder = {
-                Text(text = "Phone:")
-            },
-            onValueChange = { component.onPhoneChange(it) }
-        )
-        Button(
-            modifier = Modifier.fillMaxWidth(),
-            onClick = {
-                component.onSaveContactClicked()
-            }
-        ) {
-            Text(text = "Save")
-        }
-    }
+    AddContact(contact, onContactChanged)
 }
