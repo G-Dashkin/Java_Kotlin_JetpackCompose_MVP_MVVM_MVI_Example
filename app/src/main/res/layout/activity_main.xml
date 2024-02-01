@@ -63,9 +63,19 @@
             android:layout_height="wrap_content"/>
 
         <Button
-            android:id="@+id/btnExample6"
+            android:id="@+id/btnExample61"
             android:layout_margin="5dp"
-            android:text="Example 6"
+            android:text="Example 6.1 Decompose"
+            android:gravity="left|center"
+            android:paddingLeft="20dp"
+            android:textAllCaps="false"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <Button
+            android:id="@+id/btnExample62"
+            android:layout_margin="5dp"
+            android:text="Example 6.2 Decompose + MVI"
             android:gravity="left|center"
             android:paddingLeft="20dp"
             android:textAllCaps="false"

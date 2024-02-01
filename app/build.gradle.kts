@@ -1,6 +1,7 @@
 plugins {
     id("com.android.application")
     id("org.jetbrains.kotlin.android")
+    id("kotlin-parcelize")
 }
 
 android {
@@ -67,6 +68,10 @@ dependencies {
     implementation("androidx.constraintlayout:constraintlayout:2.1.4")
     implementation("androidx.navigation:navigation-compose:2.7.6")
     implementation("androidx.navigation:navigation-runtime-ktx:2.7.6")
+
+    // Decompose
+    implementation("com.arkivanov.decompose:decompose:2.1.2")
+    implementation("com.arkivanov.decompose:extensions-compose-jetpack:2.1.2")
 
     // RxJava
     implementation("io.reactivex.rxjava2:rxandroid:2.0.1")
