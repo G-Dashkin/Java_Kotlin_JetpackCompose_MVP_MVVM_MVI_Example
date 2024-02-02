@@ -1,12 +1,11 @@
 package com.example.java_kotlin_jetpackcompose_mvp_mvvm_mvi_example.Example6_3MviDecompose_MVI.presentation.components
 
-import android.os.Parcelable
+import com.example.java_kotlin_jetpackcompose_mvp_mvvm_mvi_example.Example6_3MviDecompose_MVI.presentation.stores.EditContactStore
 import kotlinx.coroutines.flow.StateFlow
-import kotlinx.parcelize.Parcelize
 
 interface EditContactComponent {
 
-    val model: StateFlow<Model>
+    val model: StateFlow<EditContactStore.State>
 
     fun onUserNameChange(userName: String)
 
@@ -14,9 +13,4 @@ interface EditContactComponent {
 
     fun onSaveContactClicked()
 
-    @Parcelize
-    data class Model(
-        val userName: String,
-        val phone: String
-    ): Parcelable
 }
