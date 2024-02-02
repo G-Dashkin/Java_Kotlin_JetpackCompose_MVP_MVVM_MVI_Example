@@ -2,6 +2,7 @@ plugins {
     id("com.android.application")
     id("org.jetbrains.kotlin.android")
     id("kotlin-parcelize")
+    kotlin("plugin.serialization") version "1.8.20"
 }
 
 android {
@@ -68,6 +69,10 @@ dependencies {
     implementation("androidx.constraintlayout:constraintlayout:2.1.4")
     implementation("androidx.navigation:navigation-compose:2.7.6")
     implementation("androidx.navigation:navigation-runtime-ktx:2.7.6")
+    implementation("io.coil-kt:coil-compose:2.4.0")
+    implementation("io.ktor:ktor-serialization-kotlinx-json:2.3.2")
+    implementation("io.ktor:ktor-client-cio-jvm:2.3.2")
+    implementation("io.ktor:ktor-client-content-negotiation:2.3.2")
 
     // Decompose
     implementation("com.arkivanov.decompose:decompose:2.1.2")
@@ -87,7 +92,7 @@ dependencies {
     implementation("com.jakewharton.retrofit:retrofit2-rxjava2-adapter:1.0.0")
 
     // GSON
-    implementation("com.google.code.gson:gson:2.8.6")
+    implementation("com.google.code.gson:gson:2.8.9")
 
     testImplementation("junit:junit:4.13.2")
     androidTestImplementation("androidx.test.ext:junit:1.1.5")
