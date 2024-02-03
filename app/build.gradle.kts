@@ -71,9 +71,16 @@ dependencies {
     implementation("androidx.navigation:navigation-compose:2.7.6")
     implementation("androidx.navigation:navigation-runtime-ktx:2.7.6")
     implementation("io.coil-kt:coil-compose:2.4.0")
-    implementation("io.ktor:ktor-serialization-kotlinx-json:2.3.2")
+
+    implementation("io.ktor:ktor-client-core:2.3.2")
+    implementation("io.ktor:ktor-client-android:2.3.2")
     implementation("io.ktor:ktor-client-cio-jvm:2.3.2")
     implementation("io.ktor:ktor-client-content-negotiation:2.3.2")
+    implementation("io.ktor:ktor-serialization-kotlinx-json:2.3.2")
+
+    // Orbit MVI
+    implementation("org.orbit-mvi:orbit-viewmodel:4.5.0")
+    implementation("org.orbit-mvi:orbit-compose:4.5.0")
 
     // Decompose
     implementation("com.arkivanov.decompose:decompose:2.1.2")
@@ -102,4 +109,7 @@ dependencies {
     androidTestImplementation("androidx.compose.ui:ui-test-junit4")
     debugImplementation("androidx.compose.ui:ui-tooling")
     debugImplementation("androidx.compose.ui:ui-test-manifest")
+
+    // Serialization
+    implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.4.1")
 }

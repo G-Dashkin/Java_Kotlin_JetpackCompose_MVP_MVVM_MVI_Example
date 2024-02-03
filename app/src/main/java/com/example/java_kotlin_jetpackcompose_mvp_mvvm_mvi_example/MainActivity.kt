@@ -7,7 +7,7 @@ import com.example.java_kotlin_jetpackcompose_mvp_mvvm_mvi_example.Example12Piza
 import com.example.java_kotlin_jetpackcompose_mvp_mvvm_mvi_example.Example10PizaAppAuth_MVP.PizaAppAuthMVP_Activity
 import com.example.java_kotlin_jetpackcompose_mvp_mvvm_mvi_example.Example11PizaAppAuth_MVVM.PizaAppAuthMVVM_Activity
 import com.example.java_kotlin_jetpackcompose_mvp_mvvm_mvi_example.Example1EmployeesList_MVP.screens.employees.EmployeesListMainActivity
-import com.example.java_kotlin_jetpackcompose_mvp_mvvm_mvi_example.Example4MVIAndroid_MVI.MVIAndroidActivity
+import com.example.java_kotlin_jetpackcompose_mvp_mvvm_mvi_example.Example4SimpleMVI_MVI.SimpleMVIActivity
 import com.example.java_kotlin_jetpackcompose_mvp_mvvm_mvi_example.Example5RecipeFinderApp_MVI.RecipeFinderAppActivity
 import com.example.java_kotlin_jetpackcompose_mvp_mvvm_mvi_example.Example7SimpleApp_MVP.presentation.SimpleAppMVP_Activity
 import com.example.java_kotlin_jetpackcompose_mvp_mvvm_mvi_example.Example8SimpleApp_MVVM.presentation.SimpleAppMVVM_Activity
@@ -28,7 +28,7 @@ class MainActivity : ComponentActivity() {
         binding.btnExample2.setOnClickListener { "https://www.youtube.com/watch?v=7aEvmkGigOo" }
         binding.btnExample3.setOnClickListener { "https://www.youtube.com/watch?v=7aEvmkGigOo" + "или" + "https://www.youtube.com/watch?v=7Vc2XUiXHgM&list=PL9myac9mW281RV738DvvTDnJSiA26kfUq" }
         //------------------------------------MVI---------------------------------------------------
-        binding.btnExample4.setOnClickListener { startActivity(Intent(this@MainActivity, MVIAndroidActivity::class.java)) }
+        binding.btnExample4.setOnClickListener { startActivity(Intent(this@MainActivity, SimpleMVIActivity::class.java)) }
         binding.btnExample5.setOnClickListener { startActivity(Intent(this@MainActivity, RecipeFinderAppActivity::class.java)) }
         binding.btnExample6.setOnClickListener {  }
         //-----------------------------------SimpleMVAPP--------------------------------------------

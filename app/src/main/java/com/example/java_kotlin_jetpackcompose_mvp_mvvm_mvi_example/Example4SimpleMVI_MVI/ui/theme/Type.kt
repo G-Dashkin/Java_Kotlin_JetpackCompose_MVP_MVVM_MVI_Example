@@ -1,9 +1,4 @@
-package com.example.java_kotlin_jetpackcompose_mvp_mvvm_mvi_example.Example4MVIAndroid_MVI.ui.theme
-
-import androidx.compose.ui.text.TextStyle
-import androidx.compose.ui.text.font.FontFamily
-import androidx.compose.ui.text.font.FontWeight
-import androidx.compose.ui.unit.sp
+package com.example.java_kotlin_jetpackcompose_mvp_mvvm_mvi_example.Example4SimpleMVI_MVI.ui.theme
 
 //val Typography = Typography(
 //    body1 = TextStyle(

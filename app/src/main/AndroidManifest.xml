@@ -15,12 +15,7 @@
         android:theme="@style/Theme.Java_Kotlin_JetpackCompose_MVP_MVVM_MVI_Example"
         android:usesCleartextTraffic="true"
         tools:targetApi="m">
-        <activity
-            android:name=".Example4MVIAndroid_MVI.MVIAndroidActivity"
-            android:exported="false" />
-        <activity
-            android:name=".Example5RecipeFinderApp_MVI.RecipeFinderAppActivity"
-            android:exported="false" />
+
         <activity
             android:name=".MainActivity"
             android:exported="true"
@@ -32,6 +27,15 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <activity
+            android:name=".Example4SimpleMVI_MVI.SimpleMVIActivity"
+            android:theme="@style/Theme.Material3.Light.NoActionBar"
+            android:exported="false" />
+        <activity
+            android:name=".Example5RecipeFinderApp_MVI.RecipeFinderAppActivity"
+            android:theme="@style/Theme.Material3.Light.NoActionBar"
+            android:exported="false" />
         <activity
             android:name=".Example1EmployeesList_MVP.screens.employees.EmployeesListMainActivity"
             android:exported="false"
