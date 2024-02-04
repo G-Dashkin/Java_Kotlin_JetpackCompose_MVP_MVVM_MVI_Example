@@ -29,15 +29,40 @@
         </activity>
 
         <activity
-            android:name=".Example4SimpleMVI_MVI.SimpleMVIActivity"
-            android:theme="@style/Theme.Material3.Light.NoActionBar"
-            android:exported="false" />
+            android:name=".Example1_MVP.screens.employees.Example1MVPActivity"
+            android:exported="false"
+            android:theme="@style/Theme.Material3.Light.NoActionBar" />
         <activity
-            android:name=".Example5RecipeFinderApp_MVI.RecipeFinderAppActivity"
-            android:theme="@style/Theme.Material3.Light.NoActionBar"
-            android:exported="false" />
+            android:name=".Example2_MVP.Example2MVPActivity"
+            android:exported="false"
+            android:theme="@style/Theme.Material3.Light.NoActionBar" />
         <activity
-            android:name=".Example1EmployeesList_MVP.screens.employees.EmployeesListMainActivity"
+            android:name=".Example3_MVP.ui.dashboard.Example3MVPActivity"
+            android:exported="false"
+            android:theme="@style/Theme.Material3.Light.NoActionBar" />
+        <activity
+            android:name=".Example3_MVP.ui.register.RegisterActivity"
+            android:exported="false"
+            android:theme="@style/Theme.Material3.Light.NoActionBar" />
+        <activity
+            android:name=".Example3_MVP.ui.login.LoginActivity"
+            android:exported="false"
+            android:theme="@style/Theme.Material3.Light.NoActionBar" />
+        <activity
+            android:name=".Example3_MVP.ui.daftar_league.LeagueActivity"
+            android:exported="false"
+            android:theme="@style/Theme.Material3.Light.NoActionBar" />
+
+        <activity
+            android:name=".Example4_MVI.Example4MVIActivity"
+            android:exported="false"
+            android:theme="@style/Theme.Material3.Light.NoActionBar" />
+        <activity
+            android:name=".Example5_MVI.Example5MVIActivity"
+            android:exported="false"
+            android:theme="@style/Theme.Material3.Light.NoActionBar" />
+        <activity
+            android:name=".Example6_MVI.Example6MVIActivity"
             android:exported="false"
             android:theme="@style/Theme.Material3.Light.NoActionBar" />
         <activity

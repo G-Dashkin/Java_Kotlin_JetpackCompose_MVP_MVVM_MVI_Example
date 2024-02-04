@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_image"
+    tools:context=".Example3_MVP.ui.register.RegisterActivity">
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="380dp"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="120dp"
+        android:layout_marginEnd="16dp"
+        android:orientation="vertical"
+        android:padding="20dp"
+        android:background="@drawable/bg_primary_shadow_12dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="4dp"
+            android:text="@string/name"
+            android:textColor="@color/colorPrimary"
+            android:textSize="16sp"/>
+
+        <EditText
+            android:id="@+id/edtName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:background="@drawable/bg_border_4dp"
+            android:hint="@string/name_txt"
+            android:imeOptions="actionNext"
+            android:lines="1"
+            android:maxLines="1"
+            android:minLines="1"
+            android:paddingLeft="14dp"
+            android:paddingTop="14dp"
+            android:paddingRight="14dp"
+            android:paddingBottom="14dp"
+            android:singleLine="true"
+            android:textSize="16sp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:layout_marginBottom="4dp"
+            android:text="@string/address"
+            android:textColor="@color/colorPrimary"
+            android:textSize="16sp"/>
+
+        <EditText
+            android:id="@+id/edtAdress"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:background="@drawable/bg_border_4dp"
+            android:hint="@string/address_txt"
+            android:imeOptions="actionNext"
+            android:lines="1"
+            android:maxLines="1"
+            android:minLines="1"
+            android:paddingLeft="14dp"
+            android:paddingTop="14dp"
+            android:paddingRight="14dp"
+            android:paddingBottom="14dp"
+            android:singleLine="true"
+            android:textSize="16sp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:layout_marginBottom="4dp"
+            android:text="@string/phone"
+            android:textColor="@color/colorPrimary"
+            android:textSize="16sp"/>
+
+        <EditText
+            android:id="@+id/edtTelephone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:background="@drawable/bg_border_4dp"
+            android:hint="@string/telephone_txt"
+            android:imeOptions="actionNext"
+            android:lines="1"
+            android:maxLines="1"
+            android:minLines="1"
+            android:paddingLeft="14dp"
+            android:paddingTop="14dp"
+            android:paddingRight="14dp"
+            android:paddingBottom="14dp"
+            android:singleLine="true"
+            android:textSize="16sp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:layout_marginBottom="4dp"
+            android:text="@string/username"
+            android:textColor="@color/colorPrimary"
+            android:textSize="16sp"/>
+
+        <EditText
+            android:id="@+id/edtUsername"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:background="@drawable/bg_border_4dp"
+            android:hint="@string/username_txt"
+            android:imeOptions="actionNext"
+            android:lines="1"
+            android:maxLines="1"
+            android:minLines="1"
+            android:paddingLeft="14dp"
+            android:paddingTop="14dp"
+            android:paddingRight="14dp"
+            android:paddingBottom="14dp"
+            android:singleLine="true"
+            android:textSize="16sp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:layout_marginBottom="4dp"
+            android:text="@string/password"
+            android:textColor="@color/colorPrimary"
+            android:textSize="16sp"/>
+
+        <EditText
+            android:id="@+id/edtPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:background="@drawable/bg_border_4dp"
+            android:hint="@string/password_txt"
+            android:imeOptions="actionNext"
+            android:lines="1"
+            android:maxLines="1"
+            android:minLines="1"
+            android:paddingLeft="14dp"
+            android:paddingTop="14dp"
+            android:paddingRight="14dp"
+            android:paddingBottom="14dp"
+            android:singleLine="true"
+            android:textSize="16sp"/>
+
+        <!--        <android.support.design.widget.TextInputLayout-->
+        <!--            android:layout_width="match_parent"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--            android:gravity="center_horizontal"-->
+        <!--            android:background="@drawable/bg_border_4dp"-->
+        <!--            android:paddingLeft="14dp"-->
+        <!--            android:paddingTop="1dp"-->
+        <!--            android:paddingRight="14dp"-->
+        <!--            android:paddingBottom="1dp"-->
+        <!--            app:hintEnabled="false"-->
+        <!--            app:passwordToggleEnabled="true"-->
+        <!--            android:layout_marginBottom="30dp">-->
+
+        <!--            <EditText-->
+        <!--                android:id="@+id/edtPassword"-->
+        <!--                android:layout_width="match_parent"-->
+        <!--                android:layout_height="46dp"-->
+        <!--                android:background="#00ffffff"-->
+        <!--                android:hint="@string/password_txt"-->
+        <!--                android:imeOptions="actionSend"-->
+        <!--                android:inputType="textPassword"-->
+        <!--                android:lines="1"-->
+        <!--                android:maxLines="1"-->
+        <!--                android:minLines="1"-->
+        <!--                android:singleLine="true"-->
+        <!--                android:textSize="16sp"-->
+        <!--                android:drawableStart="@drawable/ic_lock_black_24dp"/>-->
+
+        <!--        </android.support.design.widget.TextInputLayout>-->
+
+        <Button
+            android:id="@+id/btnRegister"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/bg_login_4dp"
+            android:text="Register"
+            android:textStyle="bold"
+            android:textColor="#ffffff"
+            android:textSize="16sp" />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

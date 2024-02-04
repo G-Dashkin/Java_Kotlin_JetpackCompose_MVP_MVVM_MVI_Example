@@ -15,7 +15,7 @@
         <Button
             android:id="@+id/btnExample1"
             android:layout_margin="5dp"
-            android:text="Example 1 EmployeesList MVP"
+            android:text="Example 1 - MVP"
             android:gravity="left|center"
             android:paddingLeft="20dp"
             android:textAllCaps="false"
@@ -25,7 +25,7 @@
         <Button
             android:id="@+id/btnExample2"
             android:layout_margin="5dp"
-            android:text="Example 2"
+            android:text="Example 2 - MVP"
             android:gravity="left|center"
             android:paddingLeft="20dp"
             android:textAllCaps="false"
@@ -35,7 +35,7 @@
         <Button
             android:id="@+id/btnExample3"
             android:layout_margin="5dp"
-            android:text="Example 3"
+            android:text="Example 3 - MVP"
             android:gravity="left|center"
             android:paddingLeft="20dp"
             android:textAllCaps="false"
@@ -51,7 +51,7 @@
         <Button
             android:id="@+id/btnExample4"
             android:layout_margin="5dp"
-            android:text="Example 4 SimpleMVI - MVI"
+            android:text="Example 4 - MVI"
             android:gravity="left|center"
             android:paddingLeft="20dp"
             android:textAllCaps="false"
@@ -61,7 +61,7 @@
         <Button
             android:id="@+id/btnExample5"
             android:layout_margin="5dp"
-            android:text="Example 5 RecipeFinderApp - MVI"
+            android:text="Example 5 - MVI"
             android:gravity="left|center"
             android:paddingLeft="20dp"
             android:textAllCaps="false"
@@ -71,7 +71,7 @@
         <Button
             android:id="@+id/btnExample6"
             android:layout_margin="5dp"
-            android:text="Example 6  - MVI"
+            android:text="Example 6 - MVI"
             android:gravity="left|center"
             android:paddingLeft="20dp"
             android:textAllCaps="false"

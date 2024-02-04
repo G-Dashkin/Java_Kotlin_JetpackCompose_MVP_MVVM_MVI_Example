@@ -51,4 +51,14 @@
     <string name="arrow_back">Arrow back</string>
     <string name="add_to_cart">Add To Cart</string>
     <string name="description">Melting ice cream with a bright strawberry flavor is a passionate declaration of love</string>
+
+    <string name="username">Username</string>
+    <string name="username_txt">Masukkan username anda</string>
+    <string name="password_txt">Masukkan password anda</string>
+    <string name="name">Nama</string>
+    <string name="name_txt">Masukkan nama anda</string>
+    <string name="address">Alamat</string>
+    <string name="address_txt">Masukkan alamat anda</string>
+    <string name="phone">Telepon</string>
+    <string name="telephone_txt">Masukkan nomor telepon anda</string>
 </resources>
