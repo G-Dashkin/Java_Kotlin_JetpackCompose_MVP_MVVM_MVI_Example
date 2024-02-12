@@ -1,5 +1,6 @@
 package com.example.java_kotlin_jetpackcompose_mvp_mvvm_mvi_example.Example3_MVP.presenters
 
+import android.util.Log
 import com.example.java_kotlin_jetpackcompose_mvp_mvvm_mvi_example.Example3_MVP.client.ApiInterface
 import com.example.java_kotlin_jetpackcompose_mvp_mvvm_mvi_example.Example3_MVP.models.Resp.LeagueResp
 import com.example.java_kotlin_jetpackcompose_mvp_mvvm_mvi_example.Example3_MVP.models.obj.Leagues
@@ -15,6 +16,7 @@ class LeaguePresenter(val view: LeagueInterface) {
         view.showLoading()
         ApiInterface.createAPI().leagueList("application/json","application/json").enqueue(object: Callback, retrofit2.Callback<LeagueResp> {
             override fun onResponse(call: Call<LeagueResp>, response: Response<LeagueResp>) {
+
                 view.hideLoading()
                 if (response.isSuccessful){
                     if (response.body()!!.leagues.size == 0){

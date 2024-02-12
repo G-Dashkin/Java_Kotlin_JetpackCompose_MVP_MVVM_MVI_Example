@@ -35,7 +35,7 @@
         <Button
             android:id="@+id/btnExample3"
             android:layout_margin="5dp"
-            android:text="Example 3 - MVP"
+            android:text="Example 3 - MVP (Делаем с VPN)"
             android:gravity="left|center"
             android:paddingLeft="20dp"
             android:textAllCaps="false"
@@ -144,6 +144,33 @@
             android:id="@+id/btnExample12"
             android:layout_margin="5dp"
             android:text="Example 12 PizaApp AUTH - MVI"
+            android:gravity="left|center"
+            android:paddingLeft="20dp"
+            android:textAllCaps="false"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+
+        <View
+            android:layout_margin="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#000000" />
+
+        <Button
+            android:id="@+id/btnExample13"
+            android:layout_margin="5dp"
+            android:text="Example 13 XML - MVI"
+            android:gravity="left|center"
+            android:paddingLeft="20dp"
+            android:textAllCaps="false"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <Button
+            android:id="@+id/btnExample14"
+            android:layout_margin="5dp"
+            android:text="Example 14 XML - MVI"
             android:gravity="left|center"
             android:paddingLeft="20dp"
             android:textAllCaps="false"

@@ -12,7 +12,7 @@ import retrofit2.http.Header
 import java.util.concurrent.TimeUnit
 
 interface ApiInterface {
-    @GET("v1/json/1/all_leagues.php")
+    @GET("v1/json/3/all_leagues.php")
     fun leagueList(@Header("Accept") accept: String,
                    @Header("Content-Type") content: String): Call<LeagueResp>
 

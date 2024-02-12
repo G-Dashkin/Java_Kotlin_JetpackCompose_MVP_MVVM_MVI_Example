@@ -13,8 +13,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Java_Kotlin_JetpackCompose_MVP_MVVM_MVI_Example"
-        android:usesCleartextTraffic="true"
-        tools:targetApi="m">
+        android:usesCleartextTraffic="true">
+
 
         <activity
             android:name=".MainActivity"
@@ -52,7 +52,6 @@
             android:name=".Example3_MVP.ui.daftar_league.LeagueActivity"
             android:exported="false"
             android:theme="@style/Theme.Material3.Light.NoActionBar" />
-
         <activity
             android:name=".Example4_MVI.Example4MVIActivity"
             android:exported="false"
@@ -86,6 +85,14 @@
         <activity
             android:name=".Example12PizaAppAuth_MVI.PizaAppAuthMVI_Activity"
             android:exported="false" />
+        <activity
+            android:name=".Example13XML_MVI.Example13XML_MVI_Activity"
+            android:exported="false"
+            android:theme="@style/Theme.Material3.Light.NoActionBar"/>
+        <activity
+            android:name=".Example14XML_MVI.Example14XML_MVI_Activity"
+            android:exported="false"
+            android:theme="@style/Theme.Material3.Light.NoActionBar"/>
     </application>
 
 </manifest>
